@@ -40,7 +40,7 @@ function Navi() {
                     </button>
                     <NavbarToggle className='text-white hover:bg-transparent focus:bg-transparent' />
                 </div>
-                <NavbarCollapse className=''>
+                <NavbarCollapse className='uppercase'>
                     <ul className="md:flex md:flex-row flex-col gap-6">
                         <a className='nav-btn bg-primary'>{t("Home")}</a>
                         <a className='nav-btn'>{t("About Us")}</a>

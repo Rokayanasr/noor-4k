@@ -1,9 +1,25 @@
 .cartoon {
-    background: linear-gradient(to top, #000000e7, #14141417), url("./assets/hero-cartoon.avif");
+    background: linear-gradient(to top, #000000 5%, #1414142d 100%), url("./assets/hero-cartoon.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    /* filter: blur(12px); */
+}
+.movie{
+    background: linear-gradient(to top, #000000 5%, #14141453 100%), url("./assets/hero-movies.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    /* filter: blur(12px); */
+}
+.anime{
+    background: linear-gradient(to top, #000000 5%, #14141417 100%), url("./assets/hero-anime.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
