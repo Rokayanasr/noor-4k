@@ -1,12 +1,13 @@
-import Navi from './Navi'
+import { Outlet } from "react-router-dom";
+import Navi from "./Navi";
 
 function Layout() {
-  return (
-    <>
-    <h1>hi</h1>
-    <Navi/>
-    </>
-  )
+    return (
+        <>
+            <Navi />
+            <Outlet/>
+        </>
+    );
 }
 
-export default Layout
+export default Layout;

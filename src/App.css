@@ -1,0 +1,9 @@
+.cartoon {
+    background: linear-gradient(to top, #000000e7, #14141417), url("./assets/hero-cartoon.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    /* filter: blur(12px); */
+}
