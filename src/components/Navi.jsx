@@ -30,11 +30,11 @@ function Navi() {
                     <img src={logo} className='h-6 sm:h-32' alt='noor 4k Logo' />
                     <span className='self-center whitespace-nowrap lg:text-3xl text-xl font-semibold text-white'>NOOR 4K</span>
                 </NavbarBrand>
-                <div className='flex items-center md:order-2 space-x-1 gap-3 md:space-x-0 rtl:space-x-reverse'>
+                <div className='flex items-center md:order-2 md:space-x-0 rtl:space-x-reverse'>
                     <button
                         onClick={changeLanguage}
                         type='button'
-                        className='inline-flex items-center text-white bg-primary hover:bg-primaryHover outline outline-white outline-1 font-medium justify-center px-4 py-2 text-base rounded-full cursor-pointer '
+                        className='inline-flex items-center lg:text-xl text-sm text-white bg-primary hover:bg-primaryHover outline outline-white outline-1 font-medium justify-center px-4 py-2 text-base rounded-full cursor-pointer '
                     >
                         {lng === "ar" ? "English (UK)" : "العربية (KSA)"}
                     </button>
