@@ -3,23 +3,30 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    /* filter: blur(12px); */
+    position: relative;
 }
 .movie{
     background: linear-gradient(to top, #000000 5%, #14141453 100%), url("./assets/hero-movies.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    position: relative;
 }
 .anime{
-    background: linear-gradient(to top, #000000 5%, #14141417 100%), url("./assets/hero-anime.avif");
+    background: linear-gradient(to top, #000000 5%, #14141417 100%), url("./assets/hero-anime.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    position: relative;
+}
+.anime::before, .movie::before, .cartoon::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(2px); /* درجة الضبابية اللي انت عاوزها */
+    z-index: -1; /* علشان الـbefore يكون خلف المحتوى */
 }

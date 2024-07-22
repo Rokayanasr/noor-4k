@@ -31,7 +31,7 @@ function Hero() {
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-cartoon-subtitle' />
                     </h2>
-                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
+                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-7/12 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-cartoon-title' />
                     </h1>
                     <button className='btn uppercase text-black font-bold'>
