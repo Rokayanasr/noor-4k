@@ -87,3 +87,12 @@
     }
   }
   
+  .feature {
+    overflow-y: hidden;
+  }
+
+  @media (max-width: 720px) {
+    .marquee{
+        width: 180%;
+    }
+  }

@@ -12,6 +12,7 @@ import shahid from "./../assets/shahid.png";
 import hbo from "./../assets/hbo.svg";
 import netflix from "./../assets/netflix.png";
 import osn from "./../assets/osn.png";
+import chooseUs from "./../assets/chooseUs.jpg";
 import { useEffect, useRef, useState } from "react";
 
 function Hero() {
@@ -344,7 +345,7 @@ function Hero() {
                 </div>
                 <div className='grid md:grid-cols-5 w-full justify-between sm:grid-cols-4 grid-cols-2 gap-8'>
                     {/* arabic */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14 w-14 fill-primary' height={512} viewBox='0 0 56 56' width={512} xmlns='http://www.w3.org/2000/svg'>
                             <g>
                                 <path d='M23 55.932V44H11.883C14.15 50.7 18.25 55.354 23 55.932zM11.307 22A38.087 38.087 0 0010 32a38.738 38.738 0 001.278 10H23V27.206A18.9 18.9 0 0120.69 22zM9.813 44H3.229A24.122 24.122 0 0016.2 54.693 24.612 24.612 0 019.813 44zM8 32a40.233 40.233 0 011.245-10H2.192a23.911 23.911 0 000 20h7.041A40.292 40.292 0 018 32zM20.261 20a18.482 18.482 0 011.9-11.775C17.912 9.231 14.083 13.6 11.9 20zM16.128 9.318A23.779 23.779 0 003.217 20H9.8a24.259 24.259 0 016.328-10.682zM25 44v11.92c4.71-.577 8.824-5.181 11.1-11.92zM31.827 54.682A24.113 24.113 0 0044.771 44H38.2a24.474 24.474 0 01-6.373 10.682zM36.721 18.95a11.948 11.948 0 01-1.538-13.324 12 12 0 1014.461 16.91 11.947 11.947 0 01-12.923-3.586zM37.792 35.939A18.932 18.932 0 0125 29.8V42h11.709c.527-1.987.89-4.014 1.083-6.061zM43.048 12.232l-.226 1.381L43.936 13a1.338 1.338 0 011.3 0l1.115.614-.227-1.383c-.07-.43.068-.868.37-1.181l1-1.025-1.333-.2a1.353 1.353 0 01-1.022-.766l-.555-1.179-.554 1.178c-.192.41-.576.699-1.024.767l-1.332.2 1 1.022c.306.313.444.753.374 1.185zM38.778 42h7.031a23.816 23.816 0 002.119-8.238 18.86 18.86 0 01-8.118 2.2A39.161 39.161 0 0138.778 42z' />
@@ -357,7 +358,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* iraq */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' id='fi_11948754'>
                             <g id='Layer_2' data-name='Layer 2'>
                                 <g id='Flag_rectangle_copy_6' data-name='Flag_rectangle copy 6'>
@@ -390,7 +391,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* english */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg
                             className='h-14'
                             version='1.1'
@@ -475,7 +476,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* american */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <g fill='#f5f5f5'>
                                 <path d='M0 118.15H512V157.53H0z' />
@@ -504,7 +505,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* frensh */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' id='fi_12499585' enableBackground='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
                             <path
                                 d='m48 504c-19.55 0-35.83-14.03-39.31-32.57-.45-2.41-.69-4.89-.69-7.43v-125.3333-134.8367-.0002-155.8298c0-2.54.24-5.02.7-7.43 3.47-18.54 19.75-32.57 39.3-32.57h125.3333v496z'
@@ -521,7 +522,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* spanish */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' id='fi_13482017' viewBox='0 0 73.65 73.65' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                             <g transform='translate(-263.67 -263.17)'>
                                 <path d='m263.67 318.4v-36.8c0-4.5 73.66-4.5 73.66 0v36.8c0 4.5-73.66 4.5-73.66 0z' fill='#ffe600'></path>
@@ -536,13 +537,13 @@ function Hero() {
                                     <path d='m288.54 289.06a1.62 1.62 0 0 0 -1.53.49 4.26 4.26 0 0 1 -4.17-.8 1.61 1.61 0 0 0 -1.39.8 1.7 1.7 0 0 0 -1.53-.49 1.62 1.62 0 0 0 -1.26 1.33 1.54 1.54 0 0 0 .89 1.6 1.26 1.26 0 0 1 .69 1.09v.24a.29.29 0 0 0 .29.28h7.38a.28.28 0 0 0 .29-.28v-.24a1.23 1.23 0 0 1 .68-1.09 1.54 1.54 0 0 0 .89-1.6 1.66 1.66 0 0 0 -1.23-1.33z'></path>
                                 </g>
                             </g>
-                        </svg>{" "}
+                        </svg>
                         <h5>
                             <Trans i18nKey='spanish'></Trans>
                         </h5>
                     </div>
                     {/* german */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' id='fi_13481857' viewBox='0 0 73.65 73.65' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                             <g transform='translate(-263.67 -263.17)'>
                                 <path d='m263.67 312.58v-24.92c0-4.5 73.66-4.5 73.66 0v24.92c0 4.5-73.66 4.5-73.66 0z' fill='#f4002f' />
@@ -555,7 +556,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* italian */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg
                             className='h-14'
                             version='1.1'
@@ -592,7 +593,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* turkish */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' id='fi_13481957' viewBox='0 0 73.65 73.65' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                             <rect fill='#f4002f' height='73.65' rx='13.57' width='73.65' />
                             <g fill='#fff' transform='translate(-263.67 -263.17)'>
@@ -605,7 +606,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* dutsh */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14 w-14 rounded-2xl' height={480} viewBox='0 0 480 480.00001' width={480} xmlns='http://www.w3.org/2000/svg'>
                             <clipPath>
                                 <ellipse cx={-514.286} cy={506.648} rx={260} ry={248.571} transform='matrix(.685 0 0 .716 705.099 116.389)' />
@@ -622,7 +623,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* russian */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <path d='M407.818.276H104.182C45.974 4.291 0 52.773 0 112v58.759h512V112C512 52.773 466.025 4.291 407.818.276z' fill='#f5f5f5' />
                             <path d='M0 400c0 59.228 45.975 107.71 104.183 111.724h303.634C466.025 507.71 512 459.228 512 400v-58.759H0V400z' fill='#ff4b55' />
@@ -633,7 +634,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* chineese */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <path
                                 d='M400 0H112C50.144 0 0 50.144 0 112v288c0 61.856 50.144 112 112 112h288c61.856 0 112-50.144 112-112V112C512 50.144 461.856 0 400 0z'
@@ -648,7 +649,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* korean */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <path
                                 d='M400 0H112C50.144 0 0 50.144 0 112v288c0 61.856 50.144 112 112 112h288c61.856 0 112-50.144 112-112V112C512 50.144 461.856 0 400 0z'
@@ -664,14 +665,14 @@ function Hero() {
                             />
                             <g fill='#464655'>
                                 <path d='M349.921 149.189l16.035 24.101a4.414 4.414 0 01-1.219 6.112l-4.066 2.723a4.413 4.413 0 01-6.129-1.22l-16.055-24.096a4.413 4.413 0 011.222-6.118l4.086-2.728a4.415 4.415 0 016.126 1.226zM374.66 186.351l16.087 24.087a4.414 4.414 0 01-1.237 6.134l-4.083 2.699a4.414 4.414 0 01-6.103-1.23l-16.078-24.061a4.414 4.414 0 011.217-6.122l4.074-2.724a4.412 4.412 0 016.123 1.217zM367.088 137.733l40.829 61.274a4.413 4.413 0 01-1.225 6.12l-4.102 2.735a4.414 4.414 0 01-6.121-1.224l-40.843-61.269a4.413 4.413 0 011.227-6.122l4.115-2.739a4.413 4.413 0 016.12 1.225zM384.211 126.291l16.07 24.149a4.415 4.415 0 01-1.241 6.128l-4.087 2.701a4.414 4.414 0 01-6.106-1.234l-16.082-24.117a4.413 4.413 0 011.224-6.121l4.099-2.732a4.413 4.413 0 016.123 1.226zM408.967 163.531l16.046 24.099a4.413 4.413 0 01-1.221 6.115l-4.075 2.725a4.413 4.413 0 01-6.127-1.223l-16.046-24.099a4.413 4.413 0 011.221-6.115l4.075-2.725a4.413 4.413 0 016.127 1.223zM132.72 293.982l40.824 61.208a4.414 4.414 0 01-1.221 6.12l-4.089 2.73a4.414 4.414 0 01-6.123-1.222l-40.824-61.208a4.415 4.415 0 011.221-6.12l4.089-2.73a4.414 4.414 0 016.123 1.222zM115.582 305.431l16.027 24.041a4.414 4.414 0 01-1.217 6.116l-4.066 2.722a4.414 4.414 0 01-6.126-1.217l-16.048-24.035a4.414 4.414 0 011.22-6.122l4.086-2.728a4.415 4.415 0 016.124 1.223zM140.351 342.605l16.047 24.101a4.413 4.413 0 01-1.221 6.115l-4.078 2.726a4.414 4.414 0 01-6.126-1.222l-16.057-24.097a4.413 4.413 0 011.222-6.118l4.088-2.73a4.415 4.415 0 016.125 1.225zM98.442 316.876l40.798 61.211a4.413 4.413 0 01-1.22 6.117l-4.077 2.725a4.414 4.414 0 01-6.125-1.22l-40.822-61.203a4.414 4.414 0 011.224-6.122l4.101-2.734a4.417 4.417 0 016.121 1.226zM121.295 210.441l40.818-61.257a4.413 4.413 0 016.124-1.223l4.087 2.729a4.414 4.414 0 011.221 6.12l-40.834 61.222a4.414 4.414 0 01-6.108 1.232l-4.071-2.694a4.414 4.414 0 01-1.237-6.129zM104.147 199.009l40.826-61.269a4.414 4.414 0 016.126-1.222l4.077 2.725a4.413 4.413 0 011.22 6.116l-40.815 61.273a4.413 4.413 0 01-6.124 1.224l-4.088-2.729a4.413 4.413 0 01-1.222-6.118zM86.991 187.625l40.829-61.33a4.413 4.413 0 016.127-1.223l4.077 2.726a4.414 4.414 0 011.222 6.114L98.441 195.25a4.414 4.414 0 01-6.123 1.228l-4.101-2.734a4.413 4.413 0 01-1.226-6.119zM338.492 355.189l16.048-24.035a4.415 4.415 0 016.127-1.217l4.066 2.723a4.414 4.414 0 011.217 6.116l-16.028 24.04a4.414 4.414 0 01-6.123 1.223l-4.086-2.728a4.413 4.413 0 01-1.221-6.122zM363.243 318.14l16.073-24.154a4.413 4.413 0 016.123-1.227l4.096 2.73a4.413 4.413 0 011.222 6.124l-16.107 24.116a4.414 4.414 0 01-6.109 1.228l-4.062-2.692a4.415 4.415 0 01-1.236-6.125zM355.626 366.698l16.058-24.098a4.414 4.414 0 016.122-1.225l4.104 2.737a4.413 4.413 0 011.225 6.118l-16.047 24.101a4.414 4.414 0 01-6.12 1.228l-4.115-2.739a4.415 4.415 0 01-1.227-6.122zM380.402 329.464l16.066-24.042a4.414 4.414 0 016.118-1.22l4.101 2.734a4.413 4.413 0 011.221 6.125l-16.065 24.042a4.414 4.414 0 01-6.118 1.22l-4.102-2.735a4.414 4.414 0 01-1.221-6.124zM372.771 378.081l16.075-24.056a4.413 4.413 0 016.103-1.23l4.087 2.701a4.414 4.414 0 011.239 6.131l-16.063 24.088a4.414 4.414 0 01-6.121 1.224l-4.099-2.732a4.416 4.416 0 01-1.221-6.126zM397.553 340.969l16.036-24.085a4.413 4.413 0 016.127-1.223l4.072 2.722a4.414 4.414 0 011.218 6.119l-16.048 24.053a4.414 4.414 0 01-6.11 1.229l-4.059-2.691a4.413 4.413 0 01-1.236-6.124z' />
-                            </g>{" "}
+                            </g>
                         </svg>
                         <h5>
                             <Trans i18nKey='korean'></Trans>
                         </h5>
                     </div>
                     {/* canadian */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg
                             className='h-14'
                             clipRule='evenodd'
@@ -709,7 +710,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* world wide */}
-                    <div className='flex gap-2 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14 w-14 fill-primary' height={512} viewBox='0 0 32 32' width={512} xmlns='http://www.w3.org/2000/svg'>
                             <path d='M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0z' />
                             <path
@@ -729,6 +730,219 @@ function Hero() {
                         <h5>
                             <Trans i18nKey='worldwide'></Trans>
                         </h5>
+                    </div>
+                </div>
+            </section>
+
+            {/* features */}
+            <section id='manhagna' data-aos='zoom-in' className='my-container bg-black bg-opacity-50 rounded-xl feature shadow-lg shadow-[#22152d13]'>
+                <div className='flex gap-8 bg-black md:p-14 p-8 rounded-xl flex-col justify-center items-center w-full h-fit'>
+                    <h2 className='text-center uppercase font-black leading-relaxed'>
+                        <Trans i18nKey='what_distinguishes_us'></Trans>
+                    </h2>
+                    <h4 className='text-center leading-8 tracking-wide lg:pb-0 pb-4 font-semibold'>
+                        <Trans i18nKey='since_our_first_launch'></Trans>
+                    </h4>
+                    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full flex-col lg:flex-row justify-between items-center text-center gap-8'>
+                        <div data-aos='fade-up' data-aos-duration='1300' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' xmlns='http://www.w3.org/2000/svg' id='fi_17303531' data-name='Layer 1' viewBox='0 0 64 64'>
+                                    <path d='M31,51.6369a27.29986,27.29986,0,0,1-11.99152-2.76074V63.07574L31,57.38129l11.99152,5.69445V48.87616A27.29986,27.29986,0,0,1,31,51.6369Z' />
+                                    <path d='M31,.7002A23.46835,23.46835,0,1,0,54.46832,24.16852,23.4683,23.4683,0,0,0,31,.7002Zm8.8902,36.21173L31,32.238l-8.8902,4.67389,1.69788-9.89942-7.19232-7.0108,9.93951-1.44428L31,9.55066l4.44513,9.00677,9.93951,1.44428-7.19232,7.0108Z' />
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='high_quality'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' id='fi_3489339' enableBackground='new 0 0 20 20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+                                    <g fill='rgb(0,0,0)'>
+                                        <path d='m9 0h2v3h-2z' />
+                                        <path d='m5.2 1.1h3v2h-3z' transform='matrix(.383 .924 -.924 .383 6.149 -4.907)' />
+                                        <path d='m2.5 3h3v2h-3z' transform='matrix(.707 .707 -.707 .707 3.99 -1.652)' />
+                                        <path d='m.6 5.7h3v2h-3z' transform='matrix(.924 .383 -.383 .924 2.746 -.308)' />
+                                        <path d='m0 9h3v2h-3z' />
+                                        <path d='m.6 12.3h3v2h-3z' transform='matrix(.924 -.383 .383 .924 -4.909 1.831)' />
+                                        <path d='m2.5 15h3v2h-3z' transform='matrix(.707 -.707 .707 .707 -10.153 7.511)' />
+                                        <path d='m5.7 16.4h2v3h-2z' transform='matrix(-.924 -.383 .383 -.924 6.148 36.93)' />
+                                        <path d='m9 17h2v3h-2z' />
+                                        <path d='m11.8 16.9h3v2h-3z' transform='matrix(-.383 -.924 .924 -.383 1.83 36.929)' />
+                                        <path d='m14.5 15h3v2h-3z' transform='matrix(-.707 -.707 .707 -.707 16.009 38.652)' />
+                                        <path d='m16.4 12.3h3v2h-3z' transform='matrix(-.924 -.383 .383 -.924 29.276 32.328)' />
+                                        <path d='m17 9h3v2h-3z' />
+                                        <path d='m12.3.6h2v3h-2z' transform='matrix(.924 .383 -.383 .924 1.831 -4.909)' />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='no_buffering'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-up' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg
+                                    className=' w-14 fill-black'
+                                    version='1.1'
+                                    id='fi_71576'
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    xmlnsXlink='http://www.w3.org/1999/xlink'
+                                    x='0px'
+                                    y='0px'
+                                    viewBox='0 0 380 380'
+                                    style={{ enableBackground: "new 0 0 380 380" }}
+                                    xmlSpace='preserve'
+                                >
+                                    <g>
+                                        <path
+                                            d='M68.335,42.365h271.429v106.723h25.784V18.325c0-3.538-2.868-6.407-6.407-6.407H48.958c-3.538,0-6.407,2.869-6.407,6.407
+		v99.65h25.784V42.365z'
+                                        />
+                                        <path
+                                            d='M171.443,135.486H6.408c-3.541,0-6.408,2.868-6.408,6.408v219.78c0,3.538,2.867,6.407,6.408,6.407h165.035
+		c3.539,0,6.408-2.869,6.408-6.407v-219.78C177.852,138.355,174.982,135.486,171.443,135.486z M88.926,356.227
+		c-3.892,0-7.049-3.154-7.049-7.048c0-3.893,3.156-7.048,7.049-7.048c3.893,0,7.047,3.155,7.047,7.048
+		C95.973,353.072,92.818,356.227,88.926,356.227z M153.525,326.095H24.324V167.863h129.201V326.095z'
+                                        />
+                                        <rect x='194.018' y='251.783' width='60.244' height='34.692' />
+                                        <path
+                                            d='M194.018,244.514h60.244v-40.06h-60.244V244.514z M204.049,218.563c3.896,0,7.05,3.157,7.05,7.049
+		c0,3.893-3.154,7.049-7.05,7.049c-3.893,0-7.048-3.156-7.048-7.049C197.001,221.72,200.156,218.563,204.049,218.563z'
+                                        />
+                                        <path
+                                            d='M374.574,163.912h-98.719c-2.998,0-5.426,2.428-5.426,5.424v186.052c0,2.995,2.428,5.423,5.426,5.423h98.719
+		c2.998,0,5.426-2.428,5.426-5.423V169.336C380,166.34,377.572,163.912,374.574,163.912z M325.215,350.775
+		c-3.297,0-5.967-2.67-5.967-5.964c0-3.298,2.67-5.968,5.967-5.968c3.295,0,5.967,2.67,5.967,5.968
+		C331.182,348.105,328.51,350.775,325.215,350.775z M360.5,324.833h-70.57v-133.08h70.57V324.833z'
+                                        />
+                                    </g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='supports_all_devices'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' id='fi_3468577' enableBackground='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+                                    <g>
+                                        <path d='m509.397 219.393c-.855-5.967-5.2-10.843-11.03-12.376l-25.494-6.709c-5.247-20.488-13.348-40.015-24.168-58.254l13.302-22.81c3.035-5.206 2.661-11.722-.95-16.546-7.274-9.718-15.361-19.045-24.038-27.725-8.657-8.66-17.986-16.748-27.726-24.042-4.824-3.612-11.341-3.987-16.549-.948l-22.806 13.304c-18.239-10.822-37.766-18.923-58.253-24.17l-6.709-25.493c-1.534-5.829-6.407-10.174-12.374-11.031-24.066-3.457-49.139-3.457-73.205 0-5.967.856-10.84 5.201-12.374 11.031l-6.709 25.493c-20.487 5.246-40.012 13.347-58.253 24.17l-22.806-13.304c-5.206-3.037-11.725-2.662-16.549.948-9.739 7.293-19.068 15.381-27.727 24.042-8.676 8.679-16.763 18.006-24.037 27.724-3.611 4.824-3.985 11.34-.95 16.546l13.302 22.81c-10.821 18.241-18.922 37.767-24.168 58.254l-25.494 6.709c-5.83 1.533-10.175 6.409-11.03 12.376-1.726 12.039-2.602 24.353-2.602 36.602s.876 24.563 2.603 36.601c.855 5.967 5.2 10.843 11.03 12.376l25.494 6.709c5.247 20.488 13.348 40.015 24.168 58.254l-13.302 22.81c-3.035 5.206-2.661 11.722.95 16.546 7.274 9.718 15.361 19.045 24.038 27.725 8.657 8.66 17.986 16.748 27.726 24.042 4.824 3.611 11.341 3.987 16.549.948l22.806-13.304c18.239 10.822 37.766 18.923 58.253 24.169l6.709 25.493c1.534 5.829 6.407 10.174 12.374 11.031 12.033 1.73 24.348 2.606 36.602 2.606s24.569-.876 36.603-2.604c5.967-.857 10.84-5.201 12.374-11.031l6.709-25.493c20.487-5.246 40.012-13.347 58.253-24.169l22.806 13.304c5.208 3.039 11.726 2.664 16.549-.948 9.739-7.293 19.068-15.381 27.727-24.042 8.676-8.679 16.763-18.006 24.037-27.724 3.611-4.824 3.985-11.34.95-16.546l-13.302-22.81c10.821-18.241 18.922-37.766 24.168-58.254l25.494-6.709c5.83-1.533 10.175-6.409 11.03-12.376 1.727-12.038 2.603-24.352 2.603-36.601s-.877-24.566-2.604-36.604zm-253.397 196.207c-88.004 0-159.6-71.596-159.6-159.6s71.596-159.6 159.6-159.6 159.6 71.596 159.6 159.6-71.596 159.6-159.6 159.6z'></path>
+                                        <path d='m256 126.4c-71.462 0-129.6 58.138-129.6 129.6s58.138 129.6 129.6 129.6 129.6-58.138 129.6-129.6-58.138-129.6-129.6-129.6zm74.873 108.073-80.333 80.334c-2.813 2.813-6.628 4.394-10.606 4.394s-7.794-1.58-10.606-4.394l-40.168-40.167c-5.858-5.857-5.858-15.355 0-21.213 5.857-5.857 15.355-5.857 21.213 0l29.561 29.561 69.727-69.728c5.857-5.857 15.355-5.857 21.213 0 5.857 5.857 5.857 15.355-.001 21.213z'></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='easy_installation'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' xmlns='http://www.w3.org/2000/svg' id='fi_9023799' viewBox='0 0 64 64' width={512} height={512}>
+                                    <path d='M34,28A11,11,0,1,0,23,17,11.013,11.013,0,0,0,34,28ZM30,14a4,4,0,0,1,3-3.858V9a1,1,0,0,1,2,0v1.142A4,4,0,0,1,38,14a1,1,0,0,1-2,0,1.993,1.993,0,0,0-1-1.722v3.864a3.981,3.981,0,0,1,0,7.716V25a1,1,0,0,1-2,0V23.858A4,4,0,0,1,30,20a1,1,0,0,1,2,0,1.993,1.993,0,0,0,1,1.722V17.858A4,4,0,0,1,30,14Z' />
+                                    <path d='M36,20a1.993,1.993,0,0,0-1-1.722v3.444A1.993,1.993,0,0,0,36,20Z' />
+                                    <path d='M30.5,33.634V37H28a1,1,0,0,0-.707,1.707l6,6a1,1,0,0,0,1.414,0l6-6A1,1,0,0,0,40,37H37.5V33.634a17,17,0,1,0-7,0ZM34,4A13,13,0,1,1,21,17,13.015,13.015,0,0,1,34,4Z' />
+                                    <path d='M33,12.278a1.983,1.983,0,0,0,0,3.444Z' />
+                                    <rect x={1} y={45} width={14} height={19} rx={1} />
+                                    <path d='M47.258,47.215A4.969,4.969,0,0,1,49.028,51c0,.158-.007.315-.021.47l6.3-6.625a2.609,2.609,0,0,0-4.47-1.393Z' />
+                                    <path d='M58.423,44.475l-9.488,9.972A5,5,0,0,1,45.313,56H33.028a1,1,0,1,1,0-2h11a3,3,0,0,0,0-6h-11.7l-.252-.168a11.085,11.085,0,0,0-12.1,0L19.726,48H17V61h2.7a12.859,12.859,0,0,0,6.9,2H46.943a9,9,0,0,0,7.291-3.724L62.5,47.86a2.654,2.654,0,0,0-4.073-3.385Z' />
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='affordable_price'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' id='fi_6012476' enableBackground='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+                                    <path
+                                        clipRule='evenodd'
+                                        d='m259.142 74.929 16.122 42.464c.485 1.277 1.613 2.096 2.977 2.163l45.367 2.211c1.421.069 2.591.964 3.031 2.317.439 1.353.019 2.765-1.09 3.656l-35.403 28.455c-1.064.855-1.495 2.182-1.137 3.499l11.916 43.83c.373 1.373-.116 2.762-1.267 3.598s-2.623.872-3.814.093l-38.003-24.877c-1.142-.748-2.537-.748-3.679 0l-38.002 24.877c-1.19.779-2.663.743-3.813-.093-1.151-.836-1.64-2.226-1.267-3.598l11.916-43.83c.358-1.317-.073-2.644-1.137-3.499l-35.403-28.455c-1.109-.891-1.53-2.303-1.09-3.656.439-1.353 1.61-2.247 3.031-2.317l45.367-2.211c1.364-.066 2.492-.886 2.976-2.163l16.122-42.464c.505-1.33 1.717-2.166 3.14-2.166s2.635.836 3.14 2.166zm-87.864-13.359 28.376 25.551c3.279 2.951 8.33 2.685 11.281-.594s2.685-8.33-.594-11.281l-28.376-25.551c-3.279-2.951-8.33-2.685-11.281.594s-2.686 8.33.594 11.281zm158.76-11.875-28.542 25.7c-3.279 2.951-3.545 8.002-.594 11.281s8.002 3.545 11.281.594l28.542-25.7c3.279-2.951 3.545-8.002.594-11.281-2.952-3.279-8.002-3.545-11.281-.594zm-66.036-6.649c0 4.418-3.582 8-8 8s-8-3.582-8-8v-29.359c0-4.418 3.582-8 8-8s8 3.582 8 8zm-8 189.838c30.999 0 56.129 25.13 56.129 56.128 0 30.999-25.13 56.129-56.129 56.129s-56.128-25.13-56.128-56.129 25.129-56.128 56.128-56.128zm110.372 221.324c-5.96-55.692-53.099-99.067-110.372-99.067-57.274 0-104.413 43.375-110.373 99.068v22.438c0 16.34 13.327 29.667 29.667 29.667h161.411c16.34 0 29.667-13.327 29.667-29.667zm57.376-180.564c23.191 0 41.991 18.801 41.991 41.991 0 23.191-18.8 41.991-41.991 41.991s-41.991-18.8-41.991-41.991c-.001-23.19 18.799-41.991 41.991-41.991zm-335.496 0c23.191 0 41.991 18.801 41.991 41.991 0 23.191-18.8 41.991-41.991 41.991s-41.991-18.8-41.991-41.991c0-23.19 18.8-41.991 41.991-41.991zm-.001 95.199c24.472 0 46.471 10.584 61.671 27.424-10.727 16.242-17.84 35.143-20.132 55.629h-102.754c-6.227 0-11.585-2.707-15.28-7.719s-4.696-10.931-2.854-16.88c10.485-33.859 42.046-58.454 79.349-58.454zm335.496 0c37.305 0 68.865 24.595 79.349 58.454 1.842 5.949.841 11.867-2.854 16.88s-9.052 7.719-15.28 7.719h-102.754c-2.292-20.486-9.406-39.386-20.132-55.629 15.201-16.84 37.2-27.424 61.671-27.424zm-341.8-293.914 16.122 42.464c.485 1.277 1.613 2.096 2.977 2.163l45.367 2.211c1.421.069 2.591.964 3.031 2.317.439 1.353.019 2.765-1.09 3.656l-35.403 28.455c-1.064.855-1.495 2.182-1.137 3.499l11.916 43.83c.373 1.373-.116 2.762-1.267 3.598s-2.623.872-3.814.093l-38.003-24.877c-1.142-.748-2.537-.748-3.679 0l-38.002 24.877c-1.19.779-2.663.743-3.813-.093-1.151-.836-1.64-2.226-1.267-3.598l11.916-43.83c.358-1.317-.073-2.644-1.137-3.499l-35.403-28.456c-1.109-.891-1.53-2.303-1.09-3.656.439-1.353 1.61-2.247 3.031-2.317l45.367-2.211c1.364-.066 2.492-.886 2.976-2.163l16.123-42.463c.505-1.33 1.717-2.166 3.14-2.166s2.634.836 3.139 2.166zm353.856 0 16.122 42.464c.485 1.277 1.613 2.096 2.977 2.163l45.367 2.211c1.421.069 2.591.964 3.031 2.317.439 1.353.019 2.765-1.09 3.656l-35.403 28.455c-1.064.855-1.495 2.182-1.137 3.499l11.916 43.83c.373 1.373-.116 2.762-1.266 3.598-1.151.836-2.623.872-3.814.093l-38.003-24.877c-1.142-.748-2.537-.748-3.679 0l-38.002 24.877c-1.19.779-2.663.743-3.814-.093s-1.64-2.226-1.267-3.598l11.916-43.83c.358-1.317-.073-2.644-1.137-3.499l-35.403-28.455c-1.109-.891-1.53-2.303-1.09-3.656.439-1.353 1.61-2.247 3.031-2.317l45.367-2.211c1.364-.066 2.492-.886 2.976-2.163l16.122-42.464c.505-1.33 1.717-2.166 3.14-2.166s2.635.836 3.14 2.166z'
+                                        fillRule='evenodd'
+                                    />
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='satisfied_customers'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' id='fi_16821907' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
+                                    <path d='m18.18 4.56-5.79-2.48c-.25-.11-.54-.11-.79 0l-5.79 2.48c-1.1.47-1.82 1.56-1.82 2.76v4.83c0 2.73 1.33 5.32 3.55 6.91l3.86 2.76c.17.12.38.19.58.19s.41-.06.58-.19l3.86-2.76c2.23-1.59 3.55-4.17 3.55-6.91v-4.83c0-1.2-.71-2.28-1.82-2.76zm-2.47 6.15-4 4c-.2.2-.45.29-.71.29s-.51-.1-.71-.29l-2-2c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l1.29 1.29 3.29-3.29c.39-.39 1.02-.39 1.41 0s.39 1.02 0 1.41z' />
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='full_warranty'></Trans>
+                            </h4>
+                        </div>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                            <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
+                                <svg className=' w-14 fill-black' viewBox='1 -8 511.99963 511' xmlns='http://www.w3.org/2000/svg' id='fi_1441147'>
+                                    <path d='m507.605469 342.292969-48.511719-48.515625-100.355469 100.355468c-17.914062 17.914063-40.398437 29.59375-64.820312 33.964844l63.941406 63.941406c5.855469 5.859376 15.355469 5.859376 21.210937 0 0 0 128.535157-128.53125 128.535157-128.53125 5.859375-5.859374 5.859375-15.359374 0-21.214843zm0 0' />
+                                    <path d='m439.332031 271.113281c16.910157-16.90625 16.914063-44.417969.023438-61.335937-.019531-.019532-.039063-.039063-.058594-.058594-4.179687-4.175781-9.0625-7.394531-14.378906-9.546875 4.609375-11.660156 5.582031-31.378906-9.6875-46.652344-.039063-.039062-.078125-.082031-.121094-.121093-4.160156-4.132813-9.011719-7.320313-14.292969-9.460938 4.609375-11.652344 5.585938-31.375-9.675781-46.640625-.011719-.011719-.019531-.019531-.027344-.027344-4.183593-4.183593-9.070312-7.410156-14.394531-9.5625 4.609375-11.660156 5.582031-31.382812-9.6875-46.65625-.003906 0-.003906-.003906-.007812-.003906-.003907-.003906-.007813-.007813-.011719-.011719-16.917969-16.917968-44.441407-16.917968-61.359375 0l-28.441406 28.4375 14.542968 14.542969c24.234375 24.234375 24.234375 63.664063.003906 87.898437-8.15625 8.152344-18.175781 13.753907-29.097656 16.421876-2.613281 10.648437-8.066406 20.742187-16.375 29.046874-8.144531 8.144532-18.148437 13.742188-29.058594 16.414063-2.667968 10.90625-8.269531 20.914063-16.410156 29.054687-8.144531 8.144532-18.148437 13.742188-29.058594 16.414063-2.667968 10.90625-8.269531 20.914063-16.410156 29.058594-11.738281 11.734375-27.347656 18.203125-43.949218 18.203125-16.601563 0-32.210938-6.464844-43.949219-18.207032l-14.542969-14.542968-48.511719 48.515625c-5.859375 5.859375-5.859375 15.355469 0 21.214843l128.53125 128.53125c5.859375 5.859376 15.355469 5.855469 21.214844 0l92.007813-92.003906h25.921874c24.726563 0 47.972657-9.632812 65.457032-27.113281zm0 0' />
+                                    <path d='m88.664062 287.109375c12.554688 12.558594 32.914063 12.558594 45.46875 0 12.558594-12.554687 12.558594-32.910156 0-45.46875 12.558594 12.558594 32.914063 12.558594 45.472657 0 12.554687-12.554687 12.554687-32.914063 0-45.46875 12.554687 12.554687 32.914062 12.554687 45.46875 0 12.554687-12.554687 12.554687-32.914063 0-45.46875 12.554687 12.554687 32.914062 12.554687 45.46875 0 12.558593-12.558594 12.558593-32.914063 0-45.472656l-64.109375-64.109375c-12.554688-12.554688-32.914063-12.554688-45.46875 0-12.554688 12.554687-12.554688 32.914062 0 45.46875l8.03125 8.035156c-12.554688-12.558594-32.914063-12.558594-45.46875 0-12.554688 12.554688-12.554688 32.914062 0 45.46875l16.066406 16.066406c-12.554688-12.554687-32.914062-12.554687-45.46875 0-12.558594 12.554688-12.558594 32.914063 0 45.46875l16.066406 16.070313c-12.558594-12.558594-32.914062-12.558594-45.472656 0-12.554688 12.554687-12.554688 32.910156 0 45.46875zm0 0' />
+                                    <path d='m284.4375 19.820312c2.21875-2.21875 4.566406-4.257812 7.007812-6.152343l-8.773437-8.773438c-4.5625-4.566406-11.542969-5.695312-17.3125-2.8125l-37.023437 18.511719 27.664062 27.667969zm0 0' />
+                                </svg>
+                            </div>
+                            <h4>
+                                <Trans i18nKey='support_services'></Trans>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* why chose us */}
+            <section id='aboutus' className='my-container bg-black'>
+                <div className='flex flex-col lg:flex-row justify-center h-full w-full items-center gap-8 '>
+                    <div data-aos='fade-left' className='basis-1/2 flex flex-col gap-6 justify-center order-3 items-center md:items-start'>
+                        <h2 className='flex text-center uppercase md:text-start md:justify-start items-center justify-center md:items-start w-full font-black leading-relaxed'>
+                            <Trans i18nKey='why_choose_us'></Trans>
+                        </h2>
+                        <h4 className='text-justify text-white leading-10'>
+                            <strong className='text-primary'>
+                                <Trans i18nKey='img_quality'></Trans> {""}
+                            </strong>
+                            <Trans i18nKey='img_quality_paragraph'></Trans>
+                        </h4>
+                        <h4 className='text-justify text-white leading-10'>
+                            <strong className='text-primary'>
+                                <Trans i18nKey='after_sale'></Trans> {""}
+                            </strong>
+                            <Trans i18nKey='after_sale_paragraph'></Trans>
+                        </h4>
+                        <h4 className='text-justify text-white leading-10'>
+                            <strong className='text-primary'>
+                                <Trans i18nKey='customer_support'></Trans> {""}
+                            </strong>
+                            <Trans i18nKey='customer_support_paragraph'></Trans>
+                        </h4>
+                        {/* <h4 className='text-justify text-white leading-10'>
+                            <Trans i18nKey='dont_miss'></Trans>
+                        </h4> */}
+                        <button className='btn '>
+                            {" "}
+                            <Trans i18nKey='dont_miss_btn'></Trans>
+                        </button>
+                    </div>
+                    <div data-aos='fade-right' className='basis-1/2 h-full order-2 lg:order-last'>
+                        <img loading='lazy' className='w-fit h-full rounded-xl' src={chooseUs} alt='' />
                     </div>
                 </div>
             </section>
