@@ -42,7 +42,7 @@ function Hero() {
                 console.log("stopped observing");
             }
         };
-    }, []);
+    }, [isAnimating]);
 
     useEffect(() => {
         if (marqueeRef.current) {
