@@ -27,7 +27,7 @@
     bottom: 0;
     left: 0;
     background: inherit;
-    filter: blur(2px);
+    filter: blur(0px);
     z-index: -1; 
 }
 

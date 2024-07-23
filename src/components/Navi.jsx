@@ -25,7 +25,7 @@ function Navi() {
     }, [language]);
     return (
         <>
-            <Navbar className='md:py-0.5 py-4 md:px-24 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full' rounded>
+            <Navbar className='md:py-0.5 py-4 md:px-20 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full' rounded>
                 <NavbarBrand href='#home'>
                     <img src={logo} className='h-6 sm:h-32' alt='noor 4k Logo' />
                     <span className='self-center whitespace-nowrap lg:text-3xl text-xl font-semibold text-white'>NOOR 4K</span>
