@@ -1,19 +1,19 @@
 .cartoon {
-    background: linear-gradient(to top, #000000 5%, #1414142d 100%), url("./assets/hero-cartoon.avif");
+    background: linear-gradient(to top, #000000 10%, #1414142d 100%), url("./assets/hero-cartoon.avif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 .movie{
-    background: linear-gradient(to top, #000000 5%, #14141453 100%), url("./assets/hero-movies.jpg");
+    background: linear-gradient(to top, #000000 10%, #14141453 100%), url("./assets/hero-movies.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 .anime{
-    background: linear-gradient(to top, #000000 5%, #14141417 100%), url("./assets/hero-anime.jpg");
+    background: linear-gradient(to top, #000000 10%, #14141417 100%), url("./assets/hero-anime.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,6 +27,63 @@
     bottom: 0;
     left: 0;
     background: inherit;
-    filter: blur(2px); /* درجة الضبابية اللي انت عاوزها */
-    z-index: -1; /* علشان الـbefore يكون خلف المحتوى */
+    filter: blur(2px);
+    z-index: -1; 
 }
+
+.card{
+    background: linear-gradient(to bottom left, #5d49170f, #0f0e08e9);
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+    background: linear-gradient(to bottom, #0f0e08e9, #5d49170f);
+}
+.quote{
+    height: fit-content;
+    /* background: linear-gradient(to left, #F0C45A, #d5a637); */
+    
+}
+
+.color-change-2x {
+    background: linear-gradient(to right, #ffc336, #fff8d7, #8d7a1b);
+    background-size: 300%;
+    -webkit-animation: color-change-2x 1.5s linear infinite alternate;
+    animation: color-change-2x 1.5s linear infinite alternate;
+  }
+  
+  @-webkit-keyframes color-change-2x {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+  }
+  
+  @keyframes color-change-2x {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+  }
+
+  .wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee {
+    display: flex;
+    width: 300%;
+    animation: marquee 10s linear infinite alternate;
+    animation-play-state: paused;
+}
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-35%); /* يتحرك لنصف العرض */
+    }
+  }
+  
