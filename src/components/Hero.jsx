@@ -42,12 +42,13 @@ function Hero() {
                 console.log("stopped observing");
             }
         };
-    }, [isAnimating]);
+    }, []);
 
     useEffect(() => {
         if (marqueeRef.current) {
             marqueeRef.current.style.animationPlayState = isAnimating ? "running" : "paused";
         }
+       
     }, [isAnimating]);
 
     return (
