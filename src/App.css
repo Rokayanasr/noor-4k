@@ -78,7 +78,7 @@
     animation-play-state: paused;
 }
   .mySwiper{
-    height: 130vh;
+    height: 115vh;
   }
   @keyframes marquee {
     0% {
