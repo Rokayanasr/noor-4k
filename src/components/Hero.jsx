@@ -34,11 +34,6 @@ function Hero() {
         i18n.changeLanguage(newLng);
     };
 
-    useEffect(() => {
-        window.document.dir = i18n.dir(language);
-        localStorage.setItem("i18next", language);
-    }, [language]);
-
     const marqueeRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -98,6 +93,14 @@ function Hero() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [lastScrollTop]);
+
+    const [swiper, setSwiper] = useState(null);
+    useEffect(() => {
+        if (swiper) {
+            swiper.rtlTranslate = i18n?.dir() === "rtl";
+        }
+    }, [swiper, i18n?.dir()]);
+    
     return (
         <>
             <Navbar className={`md:py-0.5 py-4 md:px-20 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full ${navHidden ? "hidden" : ""}`} rounded>
@@ -138,7 +141,7 @@ function Hero() {
 
             <Swiper
                 id='main'
-                key={language}
+                // key={language}
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,
@@ -151,6 +154,7 @@ function Hero() {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className='mySwiper'
+                onSwiper={(swiper) => setSwiper(swiper)}
             >
                 <SwiperSlide key='cartoon' className='cartoon my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
