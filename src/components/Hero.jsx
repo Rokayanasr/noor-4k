@@ -58,13 +58,11 @@ function Hero() {
 
         if (marquee) {
             observer.observe(marquee);
-            console.log("observing");
         }
 
         return () => {
             if (marquee && isAnimating) {
                 observer.unobserve(marquee);
-                console.log("stopped observing");
             }
         };
     }, [isAnimating]);
@@ -76,7 +74,17 @@ function Hero() {
     }, [isAnimating]);
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [navHidden, setNavHidden] = useState(false);
+    useEffect(() => {
+        const handleLanguageChange = (lng) => {
+            setLanguage(lng);
+        };
 
+        i18n.on("languageChanged", handleLanguageChange);
+
+        return () => {
+            i18n.off("languageChanged", handleLanguageChange);
+        };
+    }, [i18n]);
     useEffect(() => {
         const handleScroll = () => {
             const currentScroll = window.scrollY;
@@ -108,7 +116,7 @@ function Hero() {
                 </div>
                 <NavbarBrand href='#main'>
                     <img src={logo} className='h-20 sm:h-32' alt='noor 4k Logo' />
-                    <h3 className="lg:flex hidden font-semibold">NOOR 4K</h3>
+                    <h3 className='lg:flex hidden font-semibold'>NOOR 4K</h3>
                 </NavbarBrand>
 
                 <NavbarCollapse className='uppercase'>
@@ -147,38 +155,44 @@ function Hero() {
                 modules={[Autoplay, Pagination, Navigation]}
                 className='mySwiper'
             >
-                <SwiperSlide className='cartoon my-container gap-4'>
+                <SwiperSlide key='cartoon' className='cartoon my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-cartoon-subtitle' />
                     </h2>
                     <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-7/12 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-cartoon-title' />
                     </h1>
-                    <button className='btn uppercase text-black font-bold'>
-                        <Trans i18nKey='hero-btn' />
-                    </button>
+                    <a href='#service'>
+                        <button className='btn uppercase text-black font-bold'>
+                            <Trans i18nKey='hero-btn' />
+                        </button>
+                    </a>
                 </SwiperSlide>
-                <SwiperSlide className='movie flex justify-center items-center my-container gap-4'>
+                <SwiperSlide key='movie' className='movie flex justify-center items-center my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-movie-subtitle' />
                     </h2>
                     <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-movie-title' />
                     </h1>
-                    <button className='btn uppercase text-black font-bold'>
-                        <Trans i18nKey='hero-movie-btn' />
-                    </button>
+                    <a href='#service'>
+                        <button className='btn uppercase text-black font-bold'>
+                            <Trans i18nKey='hero-movie-btn' />
+                        </button>
+                    </a>
                 </SwiperSlide>
-                <SwiperSlide className='anime flex justify-center items-center my-container gap-4'>
+                <SwiperSlide key='anime' className='anime flex justify-center items-center my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal uppercase rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-anime-subtitle' />
                     </h2>
                     <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-anime-title' />
                     </h1>
-                    <button className='btn uppercase text-black font-bold'>
-                        <Trans i18nKey='hero-anime-btn' />
-                    </button>
+                    <a href='#service'>
+                        <button className='btn uppercase text-black font-bold'>
+                            <Trans i18nKey='hero-anime-btn' />
+                        </button>
+                    </a>
                 </SwiperSlide>
             </Swiper>
 
@@ -1018,11 +1032,11 @@ function Hero() {
                             <Trans i18nKey='dont_miss'></Trans>
                         </h4> */}
                         </div>
-
-                        <button className='btn'>
-                            {" "}
-                            <Trans i18nKey='dont_miss_btn'></Trans>
-                        </button>
+                        <a href='#contactus'>
+                            <button className='btn'>
+                                <Trans i18nKey='dont_miss_btn'></Trans>
+                            </button>
+                        </a>
                     </div>
                     <div data-aos='fade-right' className='basis-1/2 h-full order-2 lg:order-last'>
                         <img loading='lazy' className='w-fit h-full rounded-xl' src={chooseUs} alt='' />
