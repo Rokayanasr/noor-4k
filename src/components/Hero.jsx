@@ -30,11 +30,13 @@ function Hero() {
         const newLng = language === "ar" ? "en" : "ar";
         setLanguage(newLng);
         cookies.set("i18next", newLng);
+        localStorage.setItem("i18next", newLng);
         i18n.changeLanguage(newLng);
     };
 
     useEffect(() => {
         window.document.dir = i18n.dir(language);
+        localStorage.setItem("i18next", language);
     }, [language]);
 
     const marqueeRef = useRef(null);
@@ -74,15 +76,12 @@ function Hero() {
     }, [isAnimating]);
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [navHidden, setNavHidden] = useState(false);
-    // useEffect(() => {
-    //     const handleLanguageChange = (lng) => {
-    //         setLanguage(lng);
-    //     };
-    //     i18n.on("languageChanged", handleLanguageChange);
-    //     return () => {
-    //         i18n.off("languageChanged", handleLanguageChange);
-    //     };
-    // }, [i18n]);
+    useEffect(() => {
+        const handleLanguageChange = (lng) => {
+            setLanguage(lng);
+        };
+        i18n.on("languageChanged", handleLanguageChange);
+    }, [i18n]);
     useEffect(() => {
         const handleScroll = () => {
             const currentScroll = window.scrollY;

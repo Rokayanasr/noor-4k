@@ -10,9 +10,9 @@ i18n.use(initReactI18next)
         debug: true,
         fallbackLng: "ar",
         detecion: {
-            order: ["cookie", "htmlTag", "localStorage", "sessionStorage", "navigator", "path", "subdomain"],
+            order: ["localStorage","cookie", "htmlTag", "sessionStorage", "navigator", "path", "subdomain"],
         },
-        caches: ["cookie"],
+        caches: ["localStorage"],
         backend: {
             loadPath: "/locales/{{lng}}/{{ns}}.json",
         },
