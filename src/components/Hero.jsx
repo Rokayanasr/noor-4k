@@ -23,19 +23,39 @@ import i18n from "i18next";
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarToggle } from "flowbite-react";
 
 function Hero() {
-    const { t } = useTranslation();
-
+    const { t, i18n } = useTranslation();
+    
+    // Initialize language state from localStorage or default to 'en'
     const lng = localStorage.getItem("i18nextLng");
     const [language, setLanguage] = useState(lng);
 
+    // Update the text direction on language change
+    useEffect(() => {
+        document.documentElement.dir = i18n.dir();
+    }, [i18n.dir()]);
+
+    // Change the language and update localStorage and i18n
     const changeLanguage = () => {
         const newLng = language === "ar" ? "en" : "ar";
         setLanguage(newLng);
-        cookies.set("i18next", newLng);
-        localStorage.setItem("i18nextLng", newLng);
+        localStorage.setItem("i18next", newLng);
         i18n.changeLanguage(newLng);
     };
 
+    // Swiper state and handler
+    const [swiper, setSwiper] = useState(null);
+
+    const handleSwiper = (swiperInstance) => {
+        setSwiper(swiperInstance);
+    };
+
+    useEffect(() => {
+        if (swiper) {
+            swiper.update(); // Force Swiper to update on language change
+        }
+    }, [language, swiper]);
+
+    // Marquee animation
     const marqueeRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -60,19 +80,22 @@ function Hero() {
         }
 
         return () => {
-            if (marquee && isAnimating) {
+            if (marquee) {
                 observer.unobserve(marquee);
             }
         };
-    }, [isAnimating]);
+    }, [marqueeRef.current]);
 
     useEffect(() => {
         if (marqueeRef.current) {
             marqueeRef.current.style.animationPlayState = isAnimating ? "running" : "paused";
         }
     }, [isAnimating]);
+
+    // Handle navbar scroll
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [navHidden, setNavHidden] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScroll = window.scrollY;
@@ -89,16 +112,6 @@ function Hero() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [lastScrollTop]);
-    const [swiper, setSwiper] = useState(null);
-
-    const handleSwiper = (swiper) => {
-        setSwiper(swiper);
-    };
-    useEffect(() => {
-        if (swiper) {
-            swiper.update(); // Force Swiper to update
-        }
-    }, [language, swiper]);
     return (
         <>
             <Navbar className={`md:py-0.5 py-4 md:px-20 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full ${navHidden ? "hidden" : ""}`} rounded>
