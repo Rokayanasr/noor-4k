@@ -1,7 +1,7 @@
 {
     "Logo name": "Noor",
     "Logo description": "4K Iptv Services",
-    "About Us": "About Us",
+    "About Us": "Why Us",
     "Home": "Home",
     "Contact Us": "Contact Us",
     "Services": "Services",
@@ -57,5 +57,10 @@
     "customer_support": "24/7 Technical Support:",
     "customer_support_paragraph": "Contact us throughout the week to ensure you get the best possible experience.",
     "dont_miss": "Don't miss this great opportunity!",
-    "dont_miss_btn": "Contact Us Now"
+    "dont_miss_btn": "Contact Us Now",
+    "telegram": "Telegram",
+    "phone": "whatsapp and calls",
+    "contact": "for subscription and contacting us please use the following",
+    "touch":"Get in touch"
+
 }

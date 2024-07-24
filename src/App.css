@@ -32,15 +32,15 @@
 }
 
 .card{
-    background: linear-gradient(to bottom left, #5d49170f, #0f0e08e9);
+    background: linear-gradient(to bottom left, #2323220f, #30303044);
     opacity: 1;
     transition: 0.3s ease-in-out;
 }
 
 .card:hover{
-    transform: scale(1.05);
-    opacity: 0.8;
-    background: linear-gradient(to bottom, #0f0e08e9, #5d49170f);
+    transform: scale(1.02);
+    opacity: 0.9;
+    background: linear-gradient(to bottom left, #30303061, #5a59570f);
 }
 .quote{
     height: fit-content;
@@ -74,10 +74,12 @@
   .marquee {
     display: flex;
     width: 300%;
-    animation: marquee 10s linear infinite alternate;
+    animation: marquee 15s linear infinite alternate;
     animation-play-state: paused;
 }
-  
+  .mySwiper{
+    height: 130vh;
+  }
   @keyframes marquee {
     0% {
       transform: translateX(0%);
@@ -91,8 +93,64 @@
     overflow-y: hidden;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     .marquee{
-        width: 180%;
+        animation: marquee 3s linear infinite alternate;
+        width: 100%;
+    }
+    .mySwiper{
+        height: 100vh;
+      }
+  }
+
+
+  #whatsapp .whtsapp {
+    position: fixed;
+    transform: all 0.5s ease;
+    background-color: #F0C45A;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    border-right: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    bottom: 70px;
+    left: 20px;
+    border: 0;
+    z-index: 9999;
+    width: 70px;
+    height: 70px;
+    line-height: 50px;
+  }
+  
+  #whatsapp .whtsapp:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #F0C45A;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+  }
+  
+  #whatsapp .whtsapp:focus {
+    border: none;
+    outline: none;
+  }
+
+  @keyframes pulse-border {
+    0% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      opacity: 0;
     }
   }

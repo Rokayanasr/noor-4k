@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "./../App.css";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import bein from "./../assets/bein.png";
 import mbc from "./../assets/mbc.png";
 import ssc from "./../assets/ssc.png";
@@ -14,10 +14,33 @@ import netflix from "./../assets/netflix.png";
 import osn from "./../assets/osn.png";
 import chooseUs from "./../assets/chooseUs.jpg";
 import { useEffect, useRef, useState } from "react";
+import logo from "../assets/logo.png";
+import Whatsapp from "./Whatsapp";
+import cookies from "js-cookie";
+import i18n from "i18next";
+import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 function Hero() {
+    const { t } = useTranslation();
+
+    const lng = cookies.get("i18next");
+    const [language, setLanguage] = useState(lng);
+
+    const changeLanguage = () => {
+        const newLng = language === "ar" ? "en" : "ar";
+        setLanguage(newLng);
+        cookies.set("i18next", newLng);
+        i18n.changeLanguage(newLng);
+    };
+
+    useEffect(() => {
+        window.document.dir = i18n.dir(language);
+    }, [language]);
+
     const marqueeRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
+
     useEffect(() => {
         const marquee = marqueeRef.current;
 
@@ -52,24 +75,79 @@ function Hero() {
             marqueeRef.current.style.animationPlayState = isAnimating ? "running" : "paused";
         }
     }, [isAnimating]);
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [navHidden, setNavHidden] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScrollTop) {
+                setNavHidden(true);
+            } else {
+                setNavHidden(false);
+            }
+            setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [lastScrollTop]);
     return (
         <>
+            <Navbar className={`md:py-0.5 py-4 md:px-20 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full ${navHidden ? "hidden" : ""}`} rounded>
+                <div className='flex items-center md:order-2 md:space-x-0 rtl:space-x-reverse'>
+                    <NavbarToggle className='text-white hover:bg-transparent focus:bg-transparent' />
+                    <button
+                        onClick={changeLanguage}
+                        type='button'
+                        className='inline-flex items-center lg:text-xl text-sm text-black font-semibold bg-primary hover:bg-primaryHover outline outline-white outline-1 justify-center px-4 py-2 rounded-full cursor-pointer '
+                    >
+                        {lng === "ar" ? "English (UK)" : "العربية (KSA)"}
+                    </button>
+                </div>
+                <NavbarBrand href='#main'>
+                    <img src={logo} className='h-20 sm:h-32' alt='noor 4k Logo' />
+                </NavbarBrand>
+
+                <NavbarCollapse className='uppercase'>
+                    <ul className='md:flex md:flex-row flex-col gap-6'>
+                        <a href='#main' className='nav-btn bg-primary text-black'>
+                            {t("Home")}
+                        </a>
+                        <a href='#whyus' className='nav-btn text-white'>
+                            {t("About Us")}
+                        </a>
+                        <a href='#contactus' className='nav-btn text-white'>
+                            {t("Contact Us")}
+                        </a>
+                        <a href='#service' className='nav-btn text-white'>
+                            {t("Services")}
+                        </a>
+                    </ul>
+                </NavbarCollapse>
+            </Navbar>
+
+            <Whatsapp />
+
             <Swiper
+                id='main'
+                key={language}
                 centeredSlides={true}
-                // autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 pagination={{
                     clickable: true,
                 }}
                 loop={true}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className='mySwiper h-screen'
+                className='mySwiper'
             >
-                <SwiperSlide className='cartoon my-container mt-12 gap-4'>
+                <SwiperSlide className='cartoon my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-cartoon-subtitle' />
                     </h2>
@@ -107,9 +185,10 @@ function Hero() {
             <section className='bg-black my-container '>
                 <div className='flex flex-col md:flex-row w-full md:h-52 justify-center gap-12 items-center'>
                     <div
+                        data-aos='fade-up'
                         data-popover-placement='top'
                         data-popover-target='popover-default'
-                        className='gap-6 outline w-72 md:h-full card outline-primary rounded-xl p-8 flex flex-col items-center justify-center'
+                        className='gap-6 sm:basis-1/3 w-full hover:border-[#93783e90] md:h-full card border border-[#55533340] rounded-xl p-8 flex flex-col items-center justify-center'
                     >
                         <svg className='fill-primary h-12 md:h-16' id='fi_15867239' enableBackground='new 0 0 100 100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
                             <path d='m49.9068451 25.7795715c-13.4143944 0-24.4067478 10.9923515-24.4067478 24.4067421s10.9923534 24.4067421 24.4067402 24.4067421 24.4067383-10.9923515 24.4067383-24.4067421c.0000152-13.4143905-10.9923363-24.4067421-24.4067307-24.4067421zm1.8631096 30.7413216-4.4037857 4.4037857c-.6547585.6547585-1.7163315.6547585-2.3710899 0l-8.6212616-8.6212616c-.6547585-.6547623-.6547585-1.7163353 0-2.3710938l3.2182388-3.2182388c.6547585-.6547585 1.7163315-.6547585 2.3710938 0l4.2174759 4.2174759 11.669979-11.5008468c.6561203-.6466103 1.7110252-.6427612 2.3624077.0086212l3.218174 3.2181778c.6581383.6581383.6542397 1.7263947-.0086861 2.379715zm-1.8631096-30.7413216c-13.4143944 0-24.4067478 10.9923515-24.4067478 24.4067421s10.9923534 24.4067421 24.4067402 24.4067421 24.4067383-10.9923515 24.4067383-24.4067421c.0000152-13.4143905-10.9923363-24.4067421-24.4067307-24.4067421zm1.8631096 30.7413216-4.4037857 4.4037857c-.6547585.6547585-1.7163315.6547585-2.3710899 0l-8.6212616-8.6212616c-.6547585-.6547623-.6547585-1.7163353 0-2.3710938l3.2182388-3.2182388c.6547585-.6547585 1.7163315-.6547585 2.3710938 0l4.2174759 4.2174759 11.669979-11.5008468c.6561203-.6466103 1.7110252-.6427612 2.3624077.0086212l3.218174 3.2181778c.6581383.6581383.6542397 1.7263947-.0086861 2.379715zm-1.8631096-30.7413216c-13.4143944 0-24.4067478 10.9923515-24.4067478 24.4067421s10.9923534 24.4067421 24.4067402 24.4067421 24.4067383-10.9923515 24.4067383-24.4067421c.0000152-13.4143905-10.9923363-24.4067421-24.4067307-24.4067421zm1.8631096 30.7413216-4.4037857 4.4037857c-.6547585.6547585-1.7163315.6547585-2.3710899 0l-8.6212616-8.6212616c-.6547585-.6547623-.6547585-1.7163353 0-2.3710938l3.2182388-3.2182388c.6547585-.6547585 1.7163315-.6547585 2.3710938 0l4.2174759 4.2174759 11.669979-11.5008468c.6561203-.6466103 1.7110252-.6427612 2.3624077.0086212l3.218174 3.2181778c.6581383.6581383.6542397 1.7263947-.0086861 2.379715zm41.7336616 1.8631096c-1.3041687-2.235733-.9315491-5.2167091.7452469-7.2661324l1.6768036-1.8631096c2.4220505-2.7946663 2.0494232-7.0798187-1.1178589-9.3155518l-2.0494232-1.3041801c-2.2357254-1.4904861-3.1672821-4.2851524-2.4220428-6.8935108l.7452469-2.4220409c1.1178589-3.5399094-1.3041763-7.2661304-5.0303955-7.8250656l-2.4220505-.3726158c-2.6083527-.3726234-4.6577759-2.4220428-5.216713-5.0303974l-.3726196-2.4220448c-.5589371-3.7262201-4.2851562-5.9619527-8.0113678-4.8440876l-2.4220428.745244c-2.6083603.7452431-5.4030228-.1863117-6.8935089-2.4220443l-1.4904861-2.0494218c-2.2357368-2.9809766-6.5208855-3.5399101-9.3155518-.9315553l-1.8631096 1.6767983c-2.0494194 1.8631105-4.8440857 2.2357321-7.2661324.9315553l-2.2357368-1.117867c-3.3535957-1.8631103-7.4524403-.3726215-8.7566185 3.1672878l-.9315548 2.2357321c-.9315548 2.4220438-3.5399132 4.0988417-6.148262 3.9125299l-2.0494251-.3726158c-3.7262211-.1863117-6.8935099 2.9809771-6.5208864 6.7071981l.1863079 2.4220409c.1863089 2.6083546-1.3041782 5.2167091-3.9125319 6.1482639l-2.235734.9315548c-3.5399084 1.4904861-4.8440871 5.5893326-2.9809771 8.7566185l1.3041787 2.0494194c1.3041787 2.235733.9315553 5.2167091-.7452435 7.2661324l-1.6767983 1.8631096c-2.4220419 2.7946663-2.049422 7.0798187 1.117867 9.3155518l2.0494218 1.3041763c2.2357335 1.49049 3.1672893 4.2851562 2.4220424 6.8935089l-.745244 2.4220428c-1.1178665 3.539917 1.3041792 7.2661362 5.0303955 7.8250656l2.4220419.3726273c2.6083565.3726196 4.6577759 2.4220428 5.2167072 5.0303955l.3726234 2.4220428c.5589314 3.7262192 4.2851524 5.9619522 8.0113735 4.8440857l2.4220428-.7452469c2.6083565-.7452469 5.403019.1863098 6.8935089 2.4220428l1.4904861 2.0494156c2.235733 2.9809723 6.5208855 3.539917 9.3155518.9315567l1.8631096-1.6768036c2.0494194-1.8631058 4.8440819-2.235733 7.2661324-.9315567l2.235733 1.1178665c3.3535995 1.8631058 7.4524384.3726196 8.7566223-3.1672897l.9315491-2.235733c.9315567-2.4220428 3.539917-4.0988464 6.1482697-3.912529l2.4220505.1863098c3.7262192.1863022 6.8935013-2.9809799 6.5208893-6.7071991l-.1863098-2.4220428c-.1863098-2.6083527 1.3041687-5.2167053 3.912529-6.148262l2.2357254-.9315567c3.5399094-1.4904861 4.8440857-5.5893288 2.9809723-8.7566147zm-43.5967712 23.1025696c-17.3269234 0-31.4865589-14.1596375-31.4865589-31.4865646s14.1596355-31.4865665 31.4865665-31.4865665 31.4865646 14.1596394 31.4865646 31.4865665c-.0000152 17.5132369-14.159645 31.4865646-31.4865722 31.4865646z' />
@@ -120,6 +199,7 @@ function Hero() {
                     </div>
 
                     <div
+                        data-aos='fade-down'
                         data-popover
                         id='popover-default'
                         role='tooltip'
@@ -133,12 +213,13 @@ function Hero() {
                         <div data-popper-arrow></div>
                     </div>
                     <div
+                        data-aos='fade-down'
                         data-popover-placement='bottom'
                         data-popover-target='popover2'
-                        className='gap-6 outline w-72 md:h-full card outline-primary rounded-xl p-8 flex flex-col items-center justify-center'
+                        className='gap-6 sm:basis-1/3 hover:border-[#93783e90] w-full md:h-full card border border-[#55533340] rounded-xl p-8 flex flex-col items-center justify-center'
                     >
                         <svg
-                            className='fill-primary h-12 md:h-16'
+                            className='fill-primary h-12 md:h-16 md:w-16 w-12'
                             id='fi_10839364'
                             enableBackground='new 0 0 100 100'
                             height='512'
@@ -166,12 +247,13 @@ function Hero() {
                         <div data-popper-arrow></div>
                     </div>
                     <div
+                        data-aos='fade-up'
                         data-popover-placement='bottom'
                         data-popover-target='popover3'
-                        className='gap-6 outline w-72 md:h-full card outline-primary rounded-xl p-8 flex flex-col items-center justify-center'
+                        className='gap-6 sm:basis-1/3 hover:border-[#93783e90] w-full md:h-full card border border-[#55533340] rounded-xl p-8 flex flex-col items-center justify-center'
                     >
                         <svg
-                            className='fill-primary h-12 md:h-16'
+                            className='fill-primary h-12 md:h-16 w-12 md:w-16'
                             version='1.1'
                             id='fi_726559'
                             xmlns='http://www.w3.org/2000/svg'
@@ -303,24 +385,19 @@ function Hero() {
 
             <section className='bg-black my-container wrapper'>
                 <div ref={marqueeRef} className='marquee flex gap-4'>
-                    <div className='flex justify-between gap-4 w-full items-center'>
+                    <div className='flex justify-center lg:justify-between gap-4 w-full items-center'>
                         <img className='h-10 md:h-14' src={shahid} alt='shahid' />
                         <img className='h-10 md:h-14' src={netflix} alt='netflix' />
                         <img className='h-10 md:h-14' src={bein} alt='bein' />
                         <img className='h-10 md:h-14' src={mbc} alt='mbc' />
                         <img className='h-10 md:h-14' src={ssc} alt='ssc' />
                         <img className='h-10 md:h-14' src={hbo} alt='hbo' />
-                    </div>
-                    <div className='md:flex hidden justify-between gap-4 w-full items-center'>
-                        <img className='h-14' src={osn} alt='osn' />
-                        <img className='h-14' src={shahid} alt='shahid' />
-                        <img className='h-14' src={netflix} alt='netflix' />
-                        <img className='h-14' src={bein} alt='bein' />
-                        <img className='h-14' src={mbc} alt='mbc' />
-                        <img className='h-14' src={ssc} alt='ssc' />
-                        <img className='h-14' src={hbo} alt='hbo' />
-                    </div>
-                    <div className='md:flex hidden justify-between gap-4 w-full items-center'>
+                        <img className='h-10 md:h-14' src={shahid} alt='shahid' />
+                        <img className='h-10 md:h-14' src={netflix} alt='netflix' />
+                        <img className='h-10 md:h-14' src={bein} alt='bein' />
+                        <img className='h-10 md:h-14' src={mbc} alt='mbc' />
+                        <img className='h-10 md:h-14' src={ssc} alt='ssc' />
+                        <img className='h-10 md:h-14' src={hbo} alt='hbo' />
                         <img className='h-14' src={osn} alt='osn' />
                         <img className='h-14' src={shahid} alt='shahid' />
                         <img className='h-14' src={netflix} alt='netflix' />
@@ -334,7 +411,7 @@ function Hero() {
 
             {/* channels */}
 
-            <section className='my-container bg-black gap-10'>
+            <section id='service' className='my-container bg-black gap-10'>
                 <div className='flex flex-col gap-2 text-center'>
                     <h2 className='font-black uppercase'>
                         <Trans i18nKey='countries-title'></Trans>
@@ -343,7 +420,7 @@ function Hero() {
                         <Trans i18nKey='countries-subtitle'></Trans>
                     </h4>
                 </div>
-                <div className='grid md:grid-cols-5 w-full justify-between sm:grid-cols-4 grid-cols-2 gap-8'>
+                <div data-aos='zoom-in' className='grid md:grid-cols-5 w-full justify-between sm:grid-cols-4 grid-cols-2 gap-8'>
                     {/* arabic */}
                     <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
                         <svg className='h-14 w-14 fill-primary' height={512} viewBox='0 0 56 56' width={512} xmlns='http://www.w3.org/2000/svg'>
@@ -909,34 +986,40 @@ function Hero() {
             </section>
 
             {/* why chose us */}
-            <section id='aboutus' className='my-container bg-black'>
-                <div className='flex flex-col lg:flex-row justify-center h-full w-full items-center gap-8 '>
-                    <div data-aos='fade-left' className='basis-1/2 flex flex-col gap-6 justify-center order-3 items-center md:items-start'>
-                        <h2 className='flex text-center uppercase md:text-start md:justify-start items-center justify-center md:items-start w-full font-black leading-relaxed'>
+            <section className='my-container bg-black'>
+                <div id='whyus' className='flex flex-col lg:flex-row justify-center h-full w-full items-center gap-8 '>
+                    <h2 className='flex md:hidden text-center uppercase md:text-start md:justify-start items-center justify-center md:items-start w-full font-black leading-relaxed'>
+                        <Trans i18nKey='why_choose_us'></Trans>
+                    </h2>
+                    <div data-aos='fade-left' className='basis-1/2 flex flex-col gap-8 justify-center order-3 items-center md:items-start'>
+                        <h2 className='md:flex hidden text-center uppercase md:text-start md:justify-start items-center justify-center md:items-start w-full font-black leading-relaxed'>
                             <Trans i18nKey='why_choose_us'></Trans>
                         </h2>
-                        <h4 className='text-justify text-white leading-10'>
-                            <strong className='text-primary'>
-                                <Trans i18nKey='img_quality'></Trans> {""}
-                            </strong>
-                            <Trans i18nKey='img_quality_paragraph'></Trans>
-                        </h4>
-                        <h4 className='text-justify text-white leading-10'>
-                            <strong className='text-primary'>
-                                <Trans i18nKey='after_sale'></Trans> {""}
-                            </strong>
-                            <Trans i18nKey='after_sale_paragraph'></Trans>
-                        </h4>
-                        <h4 className='text-justify text-white leading-10'>
-                            <strong className='text-primary'>
-                                <Trans i18nKey='customer_support'></Trans> {""}
-                            </strong>
-                            <Trans i18nKey='customer_support_paragraph'></Trans>
-                        </h4>
-                        {/* <h4 className='text-justify text-white leading-10'>
+                        <div className='flex flex-col gap-4'>
+                            <h4 className='text-justify text-white'>
+                                <strong className='text-primary'>
+                                    <Trans i18nKey='img_quality'></Trans> {""}
+                                </strong>
+                                <Trans i18nKey='img_quality_paragraph'></Trans>
+                            </h4>
+                            <h4 className='text-justify text-white'>
+                                <strong className='text-primary'>
+                                    <Trans i18nKey='after_sale'></Trans> {""}
+                                </strong>
+                                <Trans i18nKey='after_sale_paragraph'></Trans>
+                            </h4>
+                            <h4 className='text-justify text-white'>
+                                <strong className='text-primary'>
+                                    <Trans i18nKey='customer_support'></Trans> {""}
+                                </strong>
+                                <Trans i18nKey='customer_support_paragraph'></Trans>
+                            </h4>
+                            {/* <h4 className='text-justify text-white'>
                             <Trans i18nKey='dont_miss'></Trans>
                         </h4> */}
-                        <button className='btn '>
+                        </div>
+
+                        <button className='btn'>
                             {" "}
                             <Trans i18nKey='dont_miss_btn'></Trans>
                         </button>
@@ -945,6 +1028,45 @@ function Hero() {
                         <img loading='lazy' className='w-fit h-full rounded-xl' src={chooseUs} alt='' />
                     </div>
                 </div>
+            </section>
+
+            <section className='my-container bg-black'>
+                <div className='flex lg:flex-row flex-col w-full justify-between items-center gap-8'>
+                    <div id='contactus' data-aos='fade-right' className='basis-1/2 flex flex-col gap-4 md:text-justify text-center'>
+                        <h2 className='uppercase text-white font-black'>
+                            <Trans i18nKey='touch'></Trans>
+                        </h2>
+                        <h4>
+                            <Trans i18nKey='contact'></Trans>
+                        </h4>
+                    </div>
+
+                    <div data-aos='fade-left' className='flex text-center w-full basis-1/2 md:flex-row flex-col gap-4'>
+                        <div className='gap-2 hover:border-[#93783e90] border border-[#3e3d393f] flex flex-col items-center justify-center rounded-xl md:w-72 w-full card py-10 px-8'>
+                            <svg className='h-14 w-14 fill-primary' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M2.617 15.832l6.44 2.187 15.291-9.348c.222-.135.449.166.258.342L13.03 19.668l-.43 5.965a.494.494 0 00.838.388l3.564-3.505 6.516 4.932c.702.532 1.719.157 1.908-.703l4.537-20.6c.259-1.175-.893-2.167-2.016-1.737L2.585 14.12c-.796.305-.774 1.438.032 1.712z' />
+                            </svg>
+                            <h4 className='text-white tracking-wide'>
+                                <Trans i18nKey='telegram'></Trans>
+                            </h4>
+                            <h4 className='text-white tracking-wide'>+1-647-706-7229</h4>
+                        </div>
+                        <div className='gap-2 hover:border-[#93783e90] border border-[#3e3d393f] flex flex-col items-center justify-center rounded-xl md:w-72 w-full card py-10 px-8'>
+                            <svg className='h-14 w-14 fill-primary' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' data-name='Layer 3'>
+                                <path d='M29.393 23.36c-.874-.733-6-3.979-6.852-3.83-.4.071-.706.412-1.525 1.389a11.687 11.687 0 01-1.244 1.347 10.757 10.757 0 01-2.374-.88 14.7 14.7 0 01-6.784-6.786 10.757 10.757 0 01-.88-2.374 11.687 11.687 0 011.347-1.244c.976-.819 1.318-1.123 1.389-1.525.149-.854-3.1-5.978-3.83-6.852C8.334 2.243 8.056 2 7.7 2 6.668 2 2 7.772 2 8.52c0 .061.1 6.07 7.689 13.791C17.41 29.9 23.419 30 23.48 30c.748 0 6.52-4.668 6.52-5.7 0-.356-.243-.634-.607-.94zM23 15h2a8.009 8.009 0 00-8-8v2a6.006 6.006 0 016 6z' />
+                                <path d='M28 15h2A13.015 13.015 0 0017 2v2a11.013 11.013 0 0111 11z' />
+                            </svg>
+                            <h4 className='text-white tracking-wide'>
+                                <Trans i18nKey='phone'></Trans>
+                            </h4>
+                            <h4 className='text-white tracking-wide'>001-6477067229</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='flex items- md:pt-16 pt-10 md:px-20 px-4 center justify-center bg-black'>
+                <img src={logo} alt='logo-footer' className='h-36' />
             </section>
         </>
     );

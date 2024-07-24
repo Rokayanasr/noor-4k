@@ -1,10 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Navi from "./Navi";
+import Whatsapp from "./Whatsapp";
 
 function Layout() {
     return (
         <>
-            <Navi />
             <Outlet/>
         </>
     );

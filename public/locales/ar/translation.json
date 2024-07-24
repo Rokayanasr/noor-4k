@@ -1,9 +1,9 @@
 {
     "Logo name": "نور 4K",
     "Logo description": "لخدمات ال IPTV",
-    "About Us": "من نحن",
+    "About Us": "لماذا نحن",
     "Home": "الرئيسية",
-    "Contact Us": "التواصل",
+    "Contact Us": "تواصل معنا",
     "Services": "الخدمات",
     "hero-cartoon-title": "حيــاة امنــة لطفلـك علي قنوات NOOR 4K",
     "hero-cartoon-subtitle": "مع تجربة استثنائيـة لا تقـاوم",
@@ -57,8 +57,11 @@
     "customer_support":"دعم فني على مدار الساعة:",
     "customer_support_paragraph": "تواصل معنا طيلة أيام الأسبوع لضمان حصولك على أفضل تجربة ممكنة",
     "dont_miss": "لا تفوت هذه الفرصة الرائعة! ",
-    "dont_miss_btn": "تواصل معنا الآن"
-
-
+    "dont_miss_btn": "تواصل معنا الآن",
+    "telegram": "تلجرام",
+    "phone": "للاتصال المباشر من كندا و امريكا",
+    "whatsapp": "واتساب",
+    "contact": "للاشتراك و التواصل ، يمكنك استخدام الوسائل التالية",
+    "touch":"تواصل معنا"
 
 }
