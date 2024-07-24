@@ -141,7 +141,7 @@ function Hero() {
 
             <Swiper
                 id='main'
-                key={language}
+                // key={language}
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,
