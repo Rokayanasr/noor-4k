@@ -74,17 +74,15 @@ function Hero() {
     }, [isAnimating]);
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [navHidden, setNavHidden] = useState(false);
-    useEffect(() => {
-        const handleLanguageChange = (lng) => {
-            setLanguage(lng);
-        };
-
-        i18n.on("languageChanged", handleLanguageChange);
-
-        return () => {
-            i18n.off("languageChanged", handleLanguageChange);
-        };
-    }, [i18n]);
+    // useEffect(() => {
+    //     const handleLanguageChange = (lng) => {
+    //         setLanguage(lng);
+    //     };
+    //     i18n.on("languageChanged", handleLanguageChange);
+    //     return () => {
+    //         i18n.off("languageChanged", handleLanguageChange);
+    //     };
+    // }, [i18n]);
     useEffect(() => {
         const handleScroll = () => {
             const currentScroll = window.scrollY;
@@ -141,7 +139,7 @@ function Hero() {
 
             <Swiper
                 id='main'
-                // key={language}
+                key={language}
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,
