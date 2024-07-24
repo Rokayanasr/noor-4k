@@ -23,14 +23,14 @@ import { Navbar, NavbarBrand, NavbarCollapse, NavbarToggle } from "flowbite-reac
 function Hero() {
     const { t } = useTranslation();
 
-    const lng = cookies.get("i18next");
+    const lng = localStorage.getItem("i18nextLng");
     const [language, setLanguage] = useState(lng);
 
     const changeLanguage = () => {
         const newLng = language === "ar" ? "en" : "ar";
         setLanguage(newLng);
         cookies.set("i18next", newLng);
-        localStorage.setItem("i18next", newLng);
+        localStorage.setItem("i18nextLng", newLng);
         i18n.changeLanguage(newLng);
     };
 
