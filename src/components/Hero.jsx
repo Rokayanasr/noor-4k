@@ -18,8 +18,7 @@ import logo from "../assets/logo.png";
 import Whatsapp from "./Whatsapp";
 import cookies from "js-cookie";
 import i18n from "i18next";
-import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
-import { Link } from "react-router-dom";
+import { Navbar, NavbarBrand, NavbarCollapse, NavbarToggle } from "flowbite-react";
 
 function Hero() {
     const { t } = useTranslation();
@@ -109,6 +108,7 @@ function Hero() {
                 </div>
                 <NavbarBrand href='#main'>
                     <img src={logo} className='h-20 sm:h-32' alt='noor 4k Logo' />
+                    <h3 className="lg:flex hidden font-semibold">NOOR 4K</h3>
                 </NavbarBrand>
 
                 <NavbarCollapse className='uppercase'>
