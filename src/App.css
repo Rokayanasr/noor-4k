@@ -119,8 +119,8 @@
     left: 20px;
     border: 0;
     z-index: 9999;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     line-height: 50px;
   }
   
@@ -131,8 +131,8 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: #F0C45A;
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
