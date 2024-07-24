@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/css";
-import "swiper/bundle";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "./../App.css";
 import { Trans, useTranslation } from "react-i18next";
@@ -74,12 +74,6 @@ function Hero() {
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [navHidden, setNavHidden] = useState(false);
     useEffect(() => {
-        const handleLanguageChange = (lng) => {
-            setLanguage(lng);
-        };
-        i18n.on("languageChanged", handleLanguageChange);
-    }, [i18n]);
-    useEffect(() => {
         const handleScroll = () => {
             const currentScroll = window.scrollY;
             if (currentScroll > lastScrollTop) {
@@ -96,13 +90,7 @@ function Hero() {
         };
     }, [lastScrollTop]);
 
-    const [swiper, setSwiper] = useState(null);
-    useEffect(() => {
-        if (swiper) {
-            swiper.rtlTranslate = i18n?.dir() === "rtl";
-        }
-    }, [swiper, i18n?.dir()]);
-    
+   
     return (
         <>
             <Navbar className={`md:py-0.5 py-4 md:px-20 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full ${navHidden ? "hidden" : ""}`} rounded>
@@ -142,8 +130,10 @@ function Hero() {
             <Whatsapp />
 
             <Swiper
+                    dir="rtl"
+
                 id='main'
-                // key={language}
+                key={language}
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,
@@ -153,10 +143,8 @@ function Hero() {
                     clickable: true,
                 }}
                 loop={true}
-                navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className='mySwiper'
-                onSwiper={(swiper) => setSwiper(swiper)}
             >
                 <SwiperSlide key='cartoon' className='cartoon my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
