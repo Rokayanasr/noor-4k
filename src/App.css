@@ -32,15 +32,15 @@
 }
 
 .card{
-    background: linear-gradient(to bottom left, #2323220f, #30303044);
+    background: linear-gradient(to bottom left, #1b1b1b39, #4c4c4a5c);
     opacity: 1;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .card:hover{
     transform: scale(1.02);
     opacity: 0.9;
-    background: linear-gradient(to bottom left, #30303061, #5a59570f);
+    background: linear-gradient(to bottom left, #4c4c4a5c, #1b1b1b39);
 }
 .quote{
     height: fit-content;
@@ -96,7 +96,7 @@
   @media (max-width: 768px) {
     .marquee{
         animation: marquee 3s linear infinite alternate;
-        width: 100%;
+        width: 100% !important;
     }
     .mySwiper{
         height: 100vh;

@@ -158,7 +158,7 @@ function Hero() {
                         <Trans i18nKey='hero-btn' />
                     </button>
                 </SwiperSlide>
-                <SwiperSlide className='movie flex justify-center items-center my-container mt-12 gap-4'>
+                <SwiperSlide className='movie flex justify-center items-center my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-movie-subtitle' />
                     </h2>
@@ -169,7 +169,7 @@ function Hero() {
                         <Trans i18nKey='hero-movie-btn' />
                     </button>
                 </SwiperSlide>
-                <SwiperSlide className='anime flex justify-center items-center my-container mt-12 gap-4'>
+                <SwiperSlide className='anime flex justify-center items-center my-container gap-4'>
                     <h2 className='font-bold bg-black leading-normal uppercase rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-anime-subtitle' />
                     </h2>
@@ -422,7 +422,7 @@ function Hero() {
                 </div>
                 <div data-aos='zoom-in' className='grid md:grid-cols-5 w-full justify-between sm:grid-cols-4 grid-cols-2 gap-8'>
                     {/* arabic */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14 w-14 fill-primary' height={512} viewBox='0 0 56 56' width={512} xmlns='http://www.w3.org/2000/svg'>
                             <g>
                                 <path d='M23 55.932V44H11.883C14.15 50.7 18.25 55.354 23 55.932zM11.307 22A38.087 38.087 0 0010 32a38.738 38.738 0 001.278 10H23V27.206A18.9 18.9 0 0120.69 22zM9.813 44H3.229A24.122 24.122 0 0016.2 54.693 24.612 24.612 0 019.813 44zM8 32a40.233 40.233 0 011.245-10H2.192a23.911 23.911 0 000 20h7.041A40.292 40.292 0 018 32zM20.261 20a18.482 18.482 0 011.9-11.775C17.912 9.231 14.083 13.6 11.9 20zM16.128 9.318A23.779 23.779 0 003.217 20H9.8a24.259 24.259 0 016.328-10.682zM25 44v11.92c4.71-.577 8.824-5.181 11.1-11.92zM31.827 54.682A24.113 24.113 0 0044.771 44H38.2a24.474 24.474 0 01-6.373 10.682zM36.721 18.95a11.948 11.948 0 01-1.538-13.324 12 12 0 1014.461 16.91 11.947 11.947 0 01-12.923-3.586zM37.792 35.939A18.932 18.932 0 0125 29.8V42h11.709c.527-1.987.89-4.014 1.083-6.061zM43.048 12.232l-.226 1.381L43.936 13a1.338 1.338 0 011.3 0l1.115.614-.227-1.383c-.07-.43.068-.868.37-1.181l1-1.025-1.333-.2a1.353 1.353 0 01-1.022-.766l-.555-1.179-.554 1.178c-.192.41-.576.699-1.024.767l-1.332.2 1 1.022c.306.313.444.753.374 1.185zM38.778 42h7.031a23.816 23.816 0 002.119-8.238 18.86 18.86 0 01-8.118 2.2A39.161 39.161 0 0138.778 42z' />
@@ -435,7 +435,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* iraq */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' id='fi_11948754'>
                             <g id='Layer_2' data-name='Layer 2'>
                                 <g id='Flag_rectangle_copy_6' data-name='Flag_rectangle copy 6'>
@@ -468,7 +468,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* english */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg
                             className='h-14'
                             version='1.1'
@@ -553,7 +553,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* american */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <g fill='#f5f5f5'>
                                 <path d='M0 118.15H512V157.53H0z' />
@@ -582,7 +582,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* frensh */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' id='fi_12499585' enableBackground='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
                             <path
                                 d='m48 504c-19.55 0-35.83-14.03-39.31-32.57-.45-2.41-.69-4.89-.69-7.43v-125.3333-134.8367-.0002-155.8298c0-2.54.24-5.02.7-7.43 3.47-18.54 19.75-32.57 39.3-32.57h125.3333v496z'
@@ -599,7 +599,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* spanish */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' id='fi_13482017' viewBox='0 0 73.65 73.65' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                             <g transform='translate(-263.67 -263.17)'>
                                 <path d='m263.67 318.4v-36.8c0-4.5 73.66-4.5 73.66 0v36.8c0 4.5-73.66 4.5-73.66 0z' fill='#ffe600'></path>
@@ -620,7 +620,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* german */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' id='fi_13481857' viewBox='0 0 73.65 73.65' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                             <g transform='translate(-263.67 -263.17)'>
                                 <path d='m263.67 312.58v-24.92c0-4.5 73.66-4.5 73.66 0v24.92c0 4.5-73.66 4.5-73.66 0z' fill='#f4002f' />
@@ -633,7 +633,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* italian */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg
                             className='h-14'
                             version='1.1'
@@ -670,7 +670,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* turkish */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' id='fi_13481957' viewBox='0 0 73.65 73.65' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                             <rect fill='#f4002f' height='73.65' rx='13.57' width='73.65' />
                             <g fill='#fff' transform='translate(-263.67 -263.17)'>
@@ -683,7 +683,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* dutsh */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14 w-14 rounded-2xl' height={480} viewBox='0 0 480 480.00001' width={480} xmlns='http://www.w3.org/2000/svg'>
                             <clipPath>
                                 <ellipse cx={-514.286} cy={506.648} rx={260} ry={248.571} transform='matrix(.685 0 0 .716 705.099 116.389)' />
@@ -700,7 +700,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* russian */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <path d='M407.818.276H104.182C45.974 4.291 0 52.773 0 112v58.759h512V112C512 52.773 466.025 4.291 407.818.276z' fill='#f5f5f5' />
                             <path d='M0 400c0 59.228 45.975 107.71 104.183 111.724h303.634C466.025 507.71 512 459.228 512 400v-58.759H0V400z' fill='#ff4b55' />
@@ -711,7 +711,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* chineese */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <path
                                 d='M400 0H112C50.144 0 0 50.144 0 112v288c0 61.856 50.144 112 112 112h288c61.856 0 112-50.144 112-112V112C512 50.144 461.856 0 400 0z'
@@ -726,7 +726,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* korean */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' xmlSpace='preserve'>
                             <path
                                 d='M400 0H112C50.144 0 0 50.144 0 112v288c0 61.856 50.144 112 112 112h288c61.856 0 112-50.144 112-112V112C512 50.144 461.856 0 400 0z'
@@ -749,7 +749,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* canadian */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg
                             className='h-14'
                             clipRule='evenodd'
@@ -787,7 +787,7 @@ function Hero() {
                         </h5>
                     </div>
                     {/* world wide */}
-                    <div className='flex gap-3 items-center rounded-2xl justify-center bg-white bg-opacity-5 p-4'>
+                    <div className='flex gap-3 items-center rounded-2xl justify-center card p-4'>
                         <svg className='h-14 w-14 fill-primary' height={512} viewBox='0 0 32 32' width={512} xmlns='http://www.w3.org/2000/svg'>
                             <path d='M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0z' />
                             <path
@@ -821,7 +821,7 @@ function Hero() {
                         <Trans i18nKey='since_our_first_launch'></Trans>
                     </h4>
                     <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full flex-col lg:flex-row justify-between items-center text-center gap-8'>
-                        <div data-aos='fade-up' data-aos-duration='1300' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos='fade-up' data-aos-duration='1300' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' xmlns='http://www.w3.org/2000/svg' id='fi_17303531' data-name='Layer 1' viewBox='0 0 64 64'>
                                     <path d='M31,51.6369a27.29986,27.29986,0,0,1-11.99152-2.76074V63.07574L31,57.38129l11.99152,5.69445V48.87616A27.29986,27.29986,0,0,1,31,51.6369Z' />
@@ -832,7 +832,7 @@ function Hero() {
                                 <Trans i18nKey='high_quality'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' id='fi_3489339' enableBackground='new 0 0 20 20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
                                     <g fill='rgb(0,0,0)'>
@@ -857,7 +857,7 @@ function Hero() {
                                 <Trans i18nKey='no_buffering'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-up' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-up' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg
                                     className=' w-14 fill-black'
@@ -915,7 +915,7 @@ function Hero() {
                                 <Trans i18nKey='supports_all_devices'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' id='fi_3468577' enableBackground='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
                                     <g>
@@ -928,7 +928,7 @@ function Hero() {
                                 <Trans i18nKey='easy_installation'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' xmlns='http://www.w3.org/2000/svg' id='fi_9023799' viewBox='0 0 64 64' width={512} height={512}>
                                     <path d='M34,28A11,11,0,1,0,23,17,11.013,11.013,0,0,0,34,28ZM30,14a4,4,0,0,1,3-3.858V9a1,1,0,0,1,2,0v1.142A4,4,0,0,1,38,14a1,1,0,0,1-2,0,1.993,1.993,0,0,0-1-1.722v3.864a3.981,3.981,0,0,1,0,7.716V25a1,1,0,0,1-2,0V23.858A4,4,0,0,1,30,20a1,1,0,0,1,2,0,1.993,1.993,0,0,0,1,1.722V17.858A4,4,0,0,1,30,14Z' />
@@ -944,7 +944,7 @@ function Hero() {
                                 <Trans i18nKey='affordable_price'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' id='fi_6012476' enableBackground='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
                                     <path
@@ -958,7 +958,7 @@ function Hero() {
                                 <Trans i18nKey='satisfied_customers'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' id='fi_16821907' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1'>
                                     <path d='m18.18 4.56-5.79-2.48c-.25-.11-.54-.11-.79 0l-5.79 2.48c-1.1.47-1.82 1.56-1.82 2.76v4.83c0 2.73 1.33 5.32 3.55 6.91l3.86 2.76c.17.12.38.19.58.19s.41-.06.58-.19l3.86-2.76c2.23-1.59 3.55-4.17 3.55-6.91v-4.83c0-1.2-.71-2.28-1.82-2.76zm-2.47 6.15-4 4c-.2.2-.45.29-.71.29s-.51-.1-.71-.29l-2-2c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l1.29 1.29 3.29-3.29c.39-.39 1.02-.39 1.41 0s.39 1.02 0 1.41z' />
@@ -968,7 +968,7 @@ function Hero() {
                                 <Trans i18nKey='full_warranty'></Trans>
                             </h4>
                         </div>
-                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 bg-[#7e708510] flex-col flex justify-center items-center rounded-xl h-full'>
+                        <div data-aos-duration='1300' data-aos='fade-down' className='p-8 w-full gap-6 card flex-col flex justify-center items-center rounded-xl h-full'>
                             <div className='w-16 h-16 flex items-center justify-center rounded-full p-3 bg-primary manhagna-card'>
                                 <svg className=' w-14 fill-black' viewBox='1 -8 511.99963 511' xmlns='http://www.w3.org/2000/svg' id='fi_1441147'>
                                     <path d='m507.605469 342.292969-48.511719-48.515625-100.355469 100.355468c-17.914062 17.914063-40.398437 29.59375-64.820312 33.964844l63.941406 63.941406c5.855469 5.859376 15.355469 5.859376 21.210937 0 0 0 128.535157-128.53125 128.535157-128.53125 5.859375-5.859374 5.859375-15.359374 0-21.214843zm0 0' />
