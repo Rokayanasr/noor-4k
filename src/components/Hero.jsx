@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "./../App.css";
 import { Trans, useTranslation } from "react-i18next";
 import bein from "./../assets/bein.png";
@@ -89,8 +89,16 @@ function Hero() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [lastScrollTop]);
+    const [swiper, setSwiper] = useState(null);
 
-   
+    const handleSwiper = (swiper) => {
+        setSwiper(swiper);
+    };
+    useEffect(() => {
+        if (swiper) {
+            swiper.update(); // Force Swiper to update
+        }
+    }, [language, swiper]);
     return (
         <>
             <Navbar className={`md:py-0.5 py-4 md:px-20 px-4 bg-opacity-25 backdrop-blur-lg fixed z-20 shadow-lg ring-1 ring-black/5 w-full ${navHidden ? "hidden" : ""}`} rounded>
@@ -143,7 +151,8 @@ function Hero() {
                     clickable: true,
                 }}
                 loop={true}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[Autoplay, Pagination]}
+                onSwiper={handleSwiper}
                 className='mySwiper'
             >
                 <SwiperSlide key='cartoon' className='cartoon my-container gap-4'>
