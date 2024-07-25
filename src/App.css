@@ -115,6 +115,12 @@
     .mySwiper{
         height: 100vh;
       }
+      .anime{
+        background: linear-gradient(to top, #000000 10%, #14141417 100%), url("./assets/hero-anime2.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
   }
 
 
