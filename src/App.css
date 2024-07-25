@@ -1,5 +1,5 @@
 .cartoon {
-    background: linear-gradient(to top, #000000 10%, #1414142d 100%), url("./assets/hero-cartoon.avif");
+    background: linear-gradient(to top, #000000 10%, #1414142d 100%), url("./assets/hero-cartoon.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,13 +13,27 @@
     position: relative;
 }
 .anime{
-    background: linear-gradient(to top, #000000 10%, #14141417 100%), url("./assets/hero-anime.jpg");
+    background: linear-gradient(to top, #000000 10%, #14141417 100%), url("./assets/hero-anime.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
-.anime::before, .movie::before, .cartoon::before{
+.sport{
+  background: linear-gradient(to top, #000000 10%, #14141417 100%), url("./assets/body-bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.music{
+  background: linear-gradient(to top, #000000 10%, #14141417 100%), url("./assets/hero-music.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.anime::before, .movie::before, .cartoon::before, .sport::before, .music::before{
     content: "";
     position: absolute;
     top: 0;
