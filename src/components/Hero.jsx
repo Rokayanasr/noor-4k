@@ -1124,7 +1124,7 @@ function Hero() {
                             <h4 className='text-white tracking-wide'>
                                 <Trans i18nKey='telegram'></Trans>
                             </h4>
-                            <h4 className='text-white tracking-wide'>+1-647-706-7229</h4>
+                            <h4 className='text-white tracking-wide'>001-647-706-7229</h4>
                         </div>
                         <div className='gap-2 hover:border-[#93783e90] border border-[#3e3d393f] flex flex-col items-center justify-center rounded-xl md:w-72 w-full card py-10 px-8'>
                             <svg className='h-14 w-14 fill-primary' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' data-name='Layer 3'>
