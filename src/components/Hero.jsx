@@ -126,7 +126,7 @@ function Hero() {
                     </button>
                 </div>
                 <NavbarBrand className='flex gap-2' href='#main'>
-                    <img src={logo} className='h-28 md:h-24' alt='noor 4k Logo' />
+                    <img src={logo} className='h-20 md:h-22 w-20 md:w-22' alt='noor 4k Logo' />
                     <h3 className='lg:flex hidden font-semibold'>NOOR 4K</h3>
                 </NavbarBrand>
 
@@ -171,7 +171,7 @@ function Hero() {
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-cartoon-subtitle' />
                     </h2>
-                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-7/12 text-center tracking-wide leading-tight'>
+                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-10/12 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-cartoon-title' />
                     </h1>
                     <a href='#service'>
@@ -184,7 +184,7 @@ function Hero() {
                     <h2 className='font-bold bg-black leading-normal rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-movie-subtitle' />
                     </h2>
-                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
+                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-4/5 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-movie-title' />
                     </h1>
                     <a href='#service'>
@@ -197,7 +197,7 @@ function Hero() {
                     <h2 className='font-bold bg-black leading-normal uppercase rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-anime-subtitle' />
                     </h2>
-                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
+                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-4/5 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-anime-title' />
                     </h1>
                     <a href='#service'>
@@ -210,7 +210,7 @@ function Hero() {
                     <h2 className='font-bold bg-black leading-normal uppercase rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-sport-subtitle' />
                     </h2>
-                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
+                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-4/5 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-sport-title' />
                     </h1>
                     <a href='#service'>
@@ -223,7 +223,7 @@ function Hero() {
                     <h2 className='font-bold bg-black leading-normal uppercase rounded-xl px-4 py-1 text-center'>
                         <Trans i18nKey='hero-music-subtitle' />
                     </h2>
-                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-3/5 text-center tracking-wide leading-tight'>
+                    <h1 className='font-black uppercase stroke-black text-stroke-3 lg:w-4/5 text-center tracking-wide leading-tight'>
                         <Trans i18nKey='hero-music-title' />
                     </h1>
                     <a href='#service'>
